@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/readme-banner.svg" alt="Cyberdash-Rhythm-Platformer-GAME" width="100%">
+
 # CYBER DASH — Neon Rhythm Platformer
 
 <p><strong>CYBER DASH: Neon-Rhythmus-Plattformer mit 16 Levels, Editor und Audio-Engine.</strong></p>
@@ -16,10 +18,38 @@
 <p><a href="#schnellstart">Schnellstart</a> · <a href="#projektstruktur">Projektstruktur</a> · <a href="#english-summary">English</a></p>
 </div>
 
+<table>
+<tr>
+<td width="58%" valign="top">
+
+### Bestand
+
+CYBER DASH — Neon rhythm platformer with 16 levels, CRYO ice sector, full editor, and kinetic audio engine
+
+Der Default-Branch `master` ist die Fläche, die zählt. Was nicht in diesem Baum liegt, ist kein Feature dieses Repos.
+
+</td>
+<td width="42%" valign="top">
+
+### Fakten
+
+| Feld | Wert |
+| --- | --- |
+| Owner | Pierreg99 |
+| Branch | `master` |
+| Sichtbarkeit | öffentlich |
+| Sprache | JavaScript |
+| Archiv | nein |
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## Inhaltsverzeichnis
 
+- [Bestand und Fakten](#bestand)
 - [Überblick](#überblick)
 - [Features](#features)
 - [Schnellstart](#schnellstart)
@@ -37,7 +67,7 @@ CYBER DASH: Neon-Rhythmus-Plattformer mit 16 Levels, Editor und Audio-Engine.
 | Merkmal | Wert |
 | --- | --- |
 | Sprachen | JavaScript (78%), HTML (16%), CSS (6%) |
-| Dateien im Repository | 64 |
+| Dateien im Repository | 65 |
 | Einstiegspunkte | `index.html`, `server.js` |
 | Version (`package.json`) | 2.0.3 |
 | CI-Workflows | 1 |
@@ -93,7 +123,8 @@ flowchart LR
     R --> D0["dist/<br/>23 Dateien"]
     R --> D1["docs/<br/>13 Dateien"]
     R --> D2["js/<br/>10 Dateien"]
-    R --> D3["css/<br/>1 Datei"]
+    R --> D3["assets/<br/>1 Datei"]
+    R --> D4["css/<br/>1 Datei"]
     E{{"Einstieg: index.html"}}
     E -.-> R
     CI[["GitHub Actions<br/>1 Workflows"]] -.-> R
@@ -105,6 +136,8 @@ flowchart LR
 Cyberdash-Rhythm-Platformer-GAME/
 ├── .github/  (1 Datei)
 │   └── workflows/
+├── assets/  (1 Datei)
+│   └── readme-banner.svg
 ├── css/  (1 Datei)
 │   └── styles.css
 ├── dist/  (23 Dateien)
