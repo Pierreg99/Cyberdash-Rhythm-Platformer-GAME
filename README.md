@@ -2,14 +2,20 @@
 
 <img src="./assets/readme-banner.svg" alt="Cyberdash-Rhythm-Platformer-GAME" width="100%">
 
-# Cyberdash-Rhythm-Platformer-GAME
+# CYBER DASH — Neon Rhythm Platformer
 
-CYBER DASH — Neon rhythm platformer with 16 levels, CRYO ice sector, full editor, and kinetic audio engine
-
-[![branch](https://img.shields.io/badge/branch-master-7EB8C9?style=flat-square)](https://github.com/Pierreg99/Cyberdash-Rhythm-Platformer-GAME)
-[![sichtbarkeit](https://img.shields.io/badge/sichtbarkeit-öffentlich-141414?style=flat-square&labelColor=0A0A0A)](https://github.com/Pierreg99/Cyberdash-Rhythm-Platformer-GAME)
-[![sprache](https://img.shields.io/badge/sprache-JavaScript-2A2A28?style=flat-square&labelColor=0A0A0A)](https://github.com/Pierreg99/Cyberdash-Rhythm-Platformer-GAME)
-
+<p><strong>CYBER DASH: Neon-Rhythmus-Plattformer mit 16 Levels, Editor und Audio-Engine.</strong></p>
+<p>
+<img alt="JavaScript: 78%" src="https://img.shields.io/badge/JavaScript-78%25-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
+<img alt="HTML: 16%" src="https://img.shields.io/badge/HTML-16%25-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img alt="CSS: 6%" src="https://img.shields.io/badge/CSS-6%25-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img alt="Lizenz: MIT" src="https://img.shields.io/badge/Lizenz-MIT-2E7D32?style=for-the-badge">
+<img alt="Sichtbarkeit: Öffentlich" src="https://img.shields.io/badge/Sichtbarkeit-%C3%96ffentlich-0B7285?style=for-the-badge">
+</p>
+<p>
+<a href="https://github.com/Pierreg99/Cyberdash-Rhythm-Platformer-GAME/actions/workflows/deploy.yml"><img alt="deploy.yml" src="https://github.com/Pierreg99/Cyberdash-Rhythm-Platformer-GAME/actions/workflows/deploy.yml/badge.svg"></a>
+</p>
+<p><a href="#schnellstart">Schnellstart</a> · <a href="#projektstruktur">Projektstruktur</a> · <a href="#english-summary">English</a></p>
 </div>
 
 <table>
@@ -39,23 +45,156 @@ Der Default-Branch `master` ist die Fläche, die zählt. Was nicht in diesem Bau
 </tr>
 </table>
 
-## Lesen
+---
 
-1. Default-Branch öffnen.
-2. Nur Dateien in diesem Baum als Beleg nehmen.
-3. Issues und Diskussionen nur nutzen, wenn sie im Repo eingeschaltet sind.
+## Inhaltsverzeichnis
 
-## Grenze
+- [Bestand und Fakten](#bestand)
+- [Überblick](#überblick)
+- [Features](#features)
+- [Schnellstart](#schnellstart)
+- [Architektur](#architektur)
+- [Projektstruktur](#projektstruktur)
+- [Dokumentation](#dokumentation)
+- [Projektdetails](#projektdetails)
+- [English summary](#english-summary)
+- [Lizenzhinweis](#lizenzhinweis)
 
-Keine Qualitätszahl, kein Paketstand und keine Runtime, die nicht als Datei in diesem Repo steht.
+## Überblick
 
-<p align="center"><sub>Fläche nach Cryo Core Lite v1.5 · Tokens #0A0A0A / #141414 / #7EB8C9</sub></p>
+CYBER DASH: Neon-Rhythmus-Plattformer mit 16 Levels, Editor und Audio-Engine.
 
+| Merkmal | Wert |
+| --- | --- |
+| Sprachen | JavaScript (78%), HTML (16%), CSS (6%) |
+| Dateien im Repository | 65 |
+| Einstiegspunkte | `index.html`, `server.js` |
+| Version (`package.json`) | 2.0.3 |
+| CI-Workflows | 1 |
+| Lizenz | [LICENSE](LICENSE) |
+
+## Features
+
+- Canvas-2D-Rendering
+- Klangerzeugung über die Web Audio API
+- Lokale Speicherung im Browser (localStorage)
+- Touch- und Pointer-Steuerung
+- Echtzeit-Render-Schleife (requestAnimationFrame)
+- Automatisierung über GitHub Actions: `deploy.yml`
+- Veröffentlichung über GitHub Pages
+- 15 Markdown-Dokumente
+
+## Schnellstart
+
+```bash
+git clone https://github.com/Pierreg99/Cyberdash-Rhythm-Platformer-GAME.git
+cd Cyberdash-Rhythm-Platformer-GAME
+```
+
+**Node.js**
+
+```bash
+npm install
+npm run dev
+npm start
+npm run build
+npm run test
+```
 
 <details>
-<summary>Bisheriger README-Text</summary>
+<summary>Alle Skripte aus <code>package.json</code></summary>
 
-# CYBER DASH — Neon Rhythm Platformer
+| Skript | Befehl |
+| --- | --- |
+| `start` | `node server.js` |
+| `dev` | `node server.js` |
+| `build` | `node build.js` |
+| `test` | `node --eval "console.log('All modules valid!')"` |
+
+</details>
+
+## Architektur
+
+Übersicht der wichtigsten Verzeichnisse nach Anzahl der enthaltenen Dateien.
+
+```mermaid
+flowchart LR
+    R(["Cyberdash-Rhythm-Platformer-GAME"])
+    R --> D0["dist/<br/>23 Dateien"]
+    R --> D1["docs/<br/>13 Dateien"]
+    R --> D2["js/<br/>10 Dateien"]
+    R --> D3["assets/<br/>1 Datei"]
+    R --> D4["css/<br/>1 Datei"]
+    E{{"Einstieg: index.html"}}
+    E -.-> R
+    CI[["GitHub Actions<br/>1 Workflows"]] -.-> R
+```
+
+## Projektstruktur
+
+```text
+Cyberdash-Rhythm-Platformer-GAME/
+├── .github/  (1 Datei)
+│   └── workflows/
+├── assets/  (1 Datei)
+│   └── readme-banner.svg
+├── css/  (1 Datei)
+│   └── styles.css
+├── dist/  (23 Dateien)
+│   ├── css/
+│   ├── docs/
+│   ├── js/
+│   ├── .nojekyll
+│   ├── index.html
+│   ├── package.json
+│   └── … (1 weitere)
+├── docs/  (13 Dateien)
+│   ├── images/
+│   ├── API_REFERENCE.md
+│   ├── ARCHITECTURE.md
+│   ├── AUDIO_SYSTEM.md
+│   ├── LEVEL_DESIGN_GUIDE.md
+│   └── PHYSICS_ENGINE.md
+├── js/  (10 Dateien)
+│   ├── audio/
+│   ├── engine/
+│   ├── levels/
+│   ├── ui/
+│   └── main.js
+├── .gitignore
+├── build.js
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── gdrive_upload.js
+├── index.html
+├── LICENSE
+├── package.json
+├── PLAN.md
+├── PROGRESS.md
+├── QUALITY_AUDIT.md
+├── README.md
+├── ROADMAP.md
+├── server.js
+└── VERSION
+```
+
+## Dokumentation
+
+- [CHANGELOG.md](CHANGELOG.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [PLAN.md](PLAN.md)
+- [PROGRESS.md](PROGRESS.md)
+- [QUALITY_AUDIT.md](QUALITY_AUDIT.md)
+- [ROADMAP.md](ROADMAP.md)
+- [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- [docs/AUDIO_SYSTEM.md](docs/AUDIO_SYSTEM.md)
+- [docs/LEVEL_DESIGN_GUIDE.md](docs/LEVEL_DESIGN_GUIDE.md)
+- [docs/PHYSICS_ENGINE.md](docs/PHYSICS_ENGINE.md)
+
+## Projektdetails
+
+Der folgende Abschnitt übernimmt die bisherige Projektdokumentation.
 
 <p align="center">
   <img src="docs/images/banner.jpg" alt="Cyber Dash — Sector Matrix (live capture)" width="100%"/>
@@ -237,4 +376,12 @@ MIT — see [LICENSE](LICENSE).
 
 <p align="center">Neon by <a href="https://github.com/Pierreg99">Pierreg99</a> · 2026</p>
 
-</details>
+## English summary
+
+CYBER DASH: neon rhythm platformer with 16 levels, editor and audio engine.
+
+Clone the repository and follow the commands in [Schnellstart](#schnellstart); the [project layout](#projektstruktur) shows where the code lives. Further documents are listed under [Dokumentation](#dokumentation).
+
+## Lizenzhinweis
+
+Siehe [LICENSE](LICENSE).
